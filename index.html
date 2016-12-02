@@ -13,38 +13,34 @@
 </head>
 <body>
 
-  <ui-view></ui-view>
-  <h2 class="firebase_test"></h2>
+  <div class="mail_post">
+      <h1><span class="glyphicon glyphicon-send" aria-hidden="true"></span>E-Post Service</h1>
+      <form name="userForm" ng-submit="$ctrl.submitForm()" novalidate>
+          <div class="form-group">
+              <input type="email" id="fbEmail" class="form-control" placeholder="E-mail" required>
+          </div>
+          <div class="form-group">
+              <input type="password" id="fbPassword" class="form-control" placeholder="Password" required>
+          </div>
+          <button type="submit" id="btSignin" class="btn btn-action" ng-disabled="userForm.$invalid">Sign in</button>
+          <button type="submit" id="btSignup" class="btn btn-secondary" ng-disabled="userForm.$invalid">Sign up</button>
+          <button type="submit" id="btSignout" class="btn btn-action hide" ng-disabled="userForm.$invalid">Sign out</button>
+      </form>
+  </div>
+
+  <!--<ui-view></ui-view>
+  <h2 class="firebase_test"></h2>-->
 
   <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-  <script src="https://opensource.keycdn.com/angularjs/1.5.8/angular.min.js"></script>
+  <!--<script src="https://opensource.keycdn.com/angularjs/1.5.8/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>  
   <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
-  <!--<script src="bower_components/angular/angular.js"></script>-->
+  <script src="bower_components/angular/angular.js"></script>-->
   <!--<script src="bower_components/angular-route/angular-route.js"></script>-->
   <script src="app.js"></script>
-  <!--<script src="components/login/login.js"></script>-->
+  <!--<script src="components/login/login.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-auth.js"></script>-->
 
-  
-  <!--<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-auth.js"></script>-->
-
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyAhiefIsbzCYeWDi9b5LV-R80-mNRzfKZw",
-      authDomain: "mailbox-87bdf.firebaseapp.com",
-      databaseURL: "https://mailbox-87bdf.firebaseio.com",
-      storageBucket: "mailbox-87bdf.appspot.com",
-      messagingSenderId: "765645523270"
-    };   
-    
-    firebase.initializeApp(config);    
-    
-    var bigOne = document.querySelector('.firebase_test');
-    var dbRef = firebase.database().ref().child('users');
-    dbRef.on('value', snap => bigOne.innerText = snap.val());
-    
-  </script>
 
 </body>
 </html>

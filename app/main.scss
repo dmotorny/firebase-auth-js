@@ -2,118 +2,20 @@ input, button, a {
     outline: none;
 }
 
-h4 {
-    padding-left: 15px;
-    height: 50px;
-    vertical-align: middle;
-    display: table-cell;
-    line-height: 26px;
-    font-size: 165%;
-}
-
 h1 {
     margin-top: 10px;
     font-size: 165%;
+    background-image: url(public/img/fb.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
 
     &:hover {
         cursor: pointer;
     }
 }
 
-h2 {
-    color: #08c;
-    font-size: 135%;
-    display: inline-block;
-    margin: 0px;
-}
-
-h3 {
-    margin: 0px;
-    padding: 10px 12px;
-    font-size: 115%;
-    margin-right: 8px;
-    background: #fbfbfb;
-    border-radius: 5px;
-
-    &:hover {
-        background: orange;
-        cursor: pointer;
-    }
-
-    .active {
-        background: orange;
-        cursor: pointer;
-        position: relative;
-
-        &::after {
-            content: '';
-            position: absolute;
-            border: 10px solid transparent;
-            border-top: 10px solid orange;
-            margin-top: 25px;
-            left: 39%;
-        }
-    }    
-}
-
-.mail_post {
+.auth_form {
     padding: 20px 20px;
     max-width: 700px;
-    margin: 0 auto;
-
-    label {
-        font-weight: bold;
-        font-size: 102%;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0px;
-
-        li {
-            display: inline-block;
-            margin-top: 13px;
-
-            h2 {
-                padding: 10px 12px;
-                margin-right: 8px;
-                border-radius: 5px;
-                background: #fbfbfb;
-
-                &:hover {
-                    background: #08c;
-                    color: white;
-                    cursor: pointer;
-                }
-
-                .active {
-                    background: #08c;
-                    color: white;
-                    cursor: pointer;
-                    position: relative;
-
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        border: 10px solid transparent;
-                        border-top: 10px solid #08c;
-                        margin-top: 29px;
-                        left: 40%;
-                    }
-                }
-            }
-        }
-    }
-
-    .glyphicon {
-        margin: 0px 15px 0px 0px;
-        padding: 10px 13px 10px 7px;
-        background: #f7f7f7;
-        color: orange;
-        border-radius: 25px;
-    }
-
-    input {
-        margin-bottom: 15px;
-    }
+    margin: 0 auto;    
 }

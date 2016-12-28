@@ -40,7 +40,6 @@
         fbEmail.value = '';
         fbPassword.value = '';
         firebase.auth().signOut();
-
     });
 
     // Add a realtime listener

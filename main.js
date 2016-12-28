@@ -1,7 +1,7 @@
+'use strict';
+
 (function() {
     
-    // Initialize Firebase
-
     var config = {
       apiKey: "AIzaSyAhiefIsbzCYeWDi9b5LV-R80-mNRzfKZw",
       authDomain: "mailbox-87bdf.firebaseapp.com",
@@ -41,8 +41,6 @@
         fbPassword.value = '';
         firebase.auth().signOut();
     });
-
-    // Add a realtime listener
 
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {

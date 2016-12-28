@@ -1,4 +1,4 @@
-const app = angular.module('myApp', []);
+// const app = angular.module('myApp', []);
 
 (function() {
     

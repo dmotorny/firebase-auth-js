@@ -7,14 +7,14 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Запустить программу",
+            "name": "Run the app",
             "program": "${workspaceRoot}\\app",
             "cwd": "${workspaceRoot}"
         },
         {
             "type": "node",
             "request": "attach",
-            "name": "Подключиться к процессу",
+            "name": "Connect to the process",
             "port": 5858
         }
     ]

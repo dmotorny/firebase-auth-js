@@ -1,6 +1,7 @@
 (function() {
     
     // Initialize Firebase
+
     var config = {
       apiKey: "AIzaSyAhiefIsbzCYeWDi9b5LV-R80-mNRzfKZw",
       authDomain: "mailbox-87bdf.firebaseapp.com",
@@ -11,17 +12,16 @@
     
     firebase.initializeApp(config); 
 
-    const fbEmail = document.getElementById('fbEmail');
-    const fbPassword = document.getElementById('fbPassword');
-    const btSignin = document.getElementById('btSignin');
-    const btSignup = document.getElementById('btSignup');
-    const btSignout = document.getElementById('btSignout');
+    const fbEmail = document.querySelector('#fbEmail');
+    const fbPassword = document.querySelector('#fbPassword');
+    const btSignin = document.querySelector('#btSignin');
+    const btSignup = document.querySelector('#btSignup');
+    const btSignout = document.querySelector('#btSignout');
 
     btSignin.addEventListener('click', e => {
         const email = fbEmail.value;
         const pass = fbPassword.value;
         const auth = firebase.auth();
-        // Sign in
         const promise = auth.signInWithEmailAndPassword(email, pass);
         promise.catch(e => console.log(e.message));
     });
@@ -31,10 +31,8 @@
         const email = fbEmail.value;
         const pass = fbPassword.value;
         const auth = firebase.auth();
-        // Sign in
         const promise = auth.createUserWithEmailAndPassword(email, pass);
         promise
-            // .then(user => console.log(user))
             .catch(e => console.log(e.message));
     });
 
@@ -50,7 +48,6 @@
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
             console.log('logged in');
-            // console.log(firebaseUser);
             btSignout.classList.remove('hide');            
         } else {
             console.log('logged out');
